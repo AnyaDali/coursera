@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int a, b;
+	cin >> a >> b;
+	if (a > b)
+	{
+		int ost = b, i = a, j = b;
+		while (ost != 0)
+		{
+			j = ost;
+			ost = i % j;
+			i = j;
+
+		}
+		cout << j;
+	}
+	else if (a < b)
+	{
+		int ost = a, i = b, j = a;
+		while (ost != 0)
+		{
+			j = ost;
+			ost = i % j;
+			i = j;
+
+		}
+		cout << j;
+	}
+	else
+		cout << a;
+
+	return 0;
+}
